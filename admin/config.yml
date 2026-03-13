@@ -8,7 +8,7 @@ public_folder: "images"
 collections:
   - name: "products"
     label: "产品管理"
-    folder: "_data/products"
+    folder: "../_data/products"
     create: true
     slug: "{{slug}}"
     fields:
