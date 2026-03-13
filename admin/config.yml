@@ -1,0 +1,27 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "images"
+
+collections:
+  - name: "products"
+    label: "产品管理"
+    folder: "_data/products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "产品ID", name: "id", widget: "string"}
+      - {label: "分类", name: "cat", widget: "select", options: ["coil", "pipe", "section"]}
+      - {label: "中文名称", name: "name_zh", widget: "string"}
+      - {label: "英文名称", name: "name_en", widget: "string"}
+      - {label: "图片文件名", name: "imgBase", widget: "string", hint: "上传图片到 images 文件夹后，在这里填文件名（不含后缀）"}
+      - {label: "中文描述", name: "desc_zh", widget: "text"}
+      - {label: "英文描述", name: "desc_en", widget: "text"}
+      - {label: "材质", name: "material", widget: "string", required: false}
+      - {label: "规格", name: "size", widget: "string", required: false}
+      - {label: "长度", name: "length", widget: "string", required: false}
+      - {label: "MOQ", name: "moq", widget: "string", required: false}
+      - {label: "交货期", name: "delivery", widget: "string", required: false}
+      - {label: "证书", name: "cert", widget: "string", required: false}
